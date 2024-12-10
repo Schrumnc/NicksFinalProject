@@ -3,8 +3,8 @@
 
 **Commits and Transfers to the Crimson Tide 2024**
 
-This project visualizes Commits and Transfers to the Crimson Tide 2024 data on a map using Leaflet.js. The map displays different high school and college icons, with colors representing each data point's "Star" property, reflecting their prospect score.
-Data was sourced from: https://247sports.com/college/alabama/season/2024-football/commits/
+- This project visualizes Commits and Transfers to the Crimson Tide 2024 data on a map using Leaflet.js. The map displays different high school and college icons, with colors representing each data point's "Star" property, reflecting their prospect score.
+- Data was sourced from: https://247sports.com/college/alabama/season/2024-football/commits/
 
 ## Purpose
 Per the assignment, the purpose of this map was to pick a website, the 247 websites above that I have chosen, and to adapt the webpage that would best benefit from a web map option. The portion of the website I found that was best suited for the web map was on the right side of the webpage under the breakdown section. My rationale is that it was already broken down by state and position, but a map would best illustrate this in an easier format with some other key data, such as rank and size. 
