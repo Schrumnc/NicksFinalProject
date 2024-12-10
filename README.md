@@ -1,6 +1,6 @@
 # NicksFinalProject
 # High School and College Map
-#**Commits and Transfers to the Crimson Tide 2024**
+**Commits and Transfers to the Crimson Tide 2024**
 
 This project visualizes high school and college data on a map using Leaflet.js. The map displays different icons for high schools and colleges, with colors representing the "Star" property of each data point.
 
