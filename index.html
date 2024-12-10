@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>High School and College Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #5E5E5E; /* Capstone Gray */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid black;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .legend {
+            background: white;
+            padding: 10px;
+            line-height: 1.5;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+        }
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .legend-icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 24px;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+        .college-icon {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        .college-icon div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+        .college-icon span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Commits and Transfers to the Crimson Tide 2024</div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([39.8283, -98.5795], 5);
+
+        // Add a tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Function to get the icon color based on the "Star" property
+        function getIconColor(star) {
+            switch (star) {
+                case 5: return '#DC143C'; // crimson flame
+                case 4: return '#000000'; // legends black
+                case 3: return '#989898'; // capstone gray
+                default: return 'blue'; // default color
+            }
+        }
+
+        // Function to create a star icon for High School
+        function createHighSchoolStarIcon(iconColor) {
+            return L.divIcon({
+                className: 'custom-div-icon',
+                html: `<div style="color:${iconColor};font-size:24px;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">★</div>`,
+                iconSize: [24, 24],
+                iconAnchor: [12, 24],
+                popupAnchor: [0, -24]
+            });
+        }
+
+        // Function to create a very different star icon for College with a circle around it
+        function createCollegeStarIcon(iconColor) {
+            return L.divIcon({
+                className: 'custom-div-icon',
+                html: `<div style="position: relative; width: 32px; height: 32px;">
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; border: 1px solid ${iconColor};"></div>
+                            <div style="color:${iconColor};font-size:32px;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">✦</div>
+                        </div>`,
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32]
+            });
+        }
+
+        // Function to add GeoJSON data to the map
+        function addGeoJsonData(url, createIcon) {
+            $.getJSON(url, function(data) {
+                L.geoJson(data, {
+                    pointToLayer: function (feature, latlng) {
+                        var star = feature.properties.Star;
+                        var iconColor = getIconColor(star);
+                        var starIcon = createIcon(iconColor);
+                        return L.marker(latlng, { icon: starIcon });
+                    },
+                    onEachFeature: function (feature, layer) {
+                        var popupContent = "<b>" + feature.properties.Name + "</b><br>";
+                        for (var property in feature.properties) {
+                            if (feature.properties.hasOwnProperty(property) && property !== "Name") {
+                                popupContent += property + ": " + feature.properties[property] + "<br>";
+                            }
+                        }
+                        layer.bindPopup(popupContent);
+                        layer.on('mouseover', function () { this.openPopup(); });
+                        layer.on('mouseout', function () { this.closePopup(); });
+                        layer.on('click', function () { this.openPopup(); });
+                    }
+                }).addTo(map);
+            });
+        }
+
+        // Add High_School.geojson data
+        addGeoJsonData("High_School.geojson", createHighSchoolStarIcon);
+
+        // Add College.geojson data
+        addGeoJsonData("College.geojson", createCollegeStarIcon);
+
+        // Add legend to the map
+        var legend = L.control({ position: 'bottomright' });
+
+        legend.onAdd = function () {
+            var div = L.DomUtil.create('div', 'legend');
+            div.innerHTML = `
+                <div class="legend-title">Legend</div>
+                <div class="legend-item"><span class="legend-icon" style="color:#DC143C;">★</span> High School (5 Star)</div>
+                <div class="legend-item"><span class="legend-icon" style="color:#000000;">★</span> High School (4 Star)</div>
+                <div class="legend-item"><span class="legend-icon" style="color:#989898;">★</span> High School (3 Star)</div>
+                <div class="legend-item"><div class="college-icon"><div></div><span style="color:#DC143C;">✦</span></div> College (5 Star)</div>
+                <div class="legend-item"><div class="college-icon"><div></div><span style="color:#000000;">✦</span></div> College (4 Star)</div>
+                <div class="legend-item"><div class="college-icon"><div></div><span style="color:#989898;">✦</span></div> College (3 Star)</div>
+            `;
+            return div;
+        };
+
+        legend.addTo(map);
+    </script>
+</body>
+</html>
