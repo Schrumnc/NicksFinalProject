@@ -1,0 +1,446 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "QB Reese",
+        "Location": "Birmingham, AL",
+        "High School": "Ramsay HS",
+        "Position": "LB",
+        "Score": 86,
+        "Star": 3,
+        "Height": "6'",
+        "Weight": 221
+      },
+      "geometry": {
+        "coordinates": [
+          -86.79855064082071,
+          33.497652300542725
+        ],
+        "type": "Point"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Dre Kirkpatrick Jr.",
+        "Location": "Gadsden, AL",
+        "High School": "Gadsden HS",
+        "Position": "S",
+        "Score": 86,
+        "Star": 3,
+        "Height": "5'11\"",
+        "Weight": 210
+      },
+      "geometry": {
+        "coordinates": [
+          -86.03705587359349,
+          33.994914851127206
+        ],
+        "type": "Point"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Jay Lindsey",
+        "Location": "Butler, AL",
+        "High School": "Patrician Academy HS",
+        "Position": "TE",
+        "Score": 86,
+        "Star": 3,
+        "Height": "6'5\"",
+        "Weight": 255
+      },
+      "geometry": {
+        "coordinates": [
+          -88.22382599999983,
+          32.08070996999945
+        ],
+        "type": "Point"
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Cayden Jones",
+        "Location": "Arden, NC",
+        "High School": "Christ School",
+        "Position": "LB",
+        "Score": 88,
+        "Star": 3,
+        "Height": "6'4\"",
+        "Weight": 232
+      },
+      "geometry": {
+        "coordinates": [
+          -82.48760845767197,
+          35.46515413422239
+        ],
+        "type": "Point"
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Joseph Ionata",
+        "Location": "Clearwater, FL",
+        "High School": "Calvary Christian",
+        "Position": "IOL",
+        "Score": 88,
+        "Star": 3,
+        "Height": "6'5\"",
+        "Weight": 307
+      },
+      "geometry": {
+        "coordinates": [
+          -82.71013645767202,
+          27.966725889707448
+        ],
+        "type": "Point"
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "William Sanders",
+        "Location": "Brookwood, AL",
+        "High School": "Brookwood HS",
+        "Position": "IOL",
+        "Score": 89,
+        "Star": 3,
+        "Height": "6'3\"",
+        "Weight": 309
+      },
+      "geometry": {
+        "coordinates": [
+          -87.31153545767184,
+          33.25782712337272
+        ],
+        "type": "Point"
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Bubba Hampton",
+        "Location": "Daingerfield, TX",
+        "High School": "Daingerfield HS",
+        "Position": "WR",
+        "Score": 90,
+        "Star": 4,
+        "Height": "5'10\"",
+        "Weight": 194
+      },
+      "geometry": {
+        "coordinates": [
+          -94.71903991534433,
+          33.01492203705166
+        ],
+        "type": "Point"
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Rico Scott",
+        "Location": "Harrisburg, PA",
+        "High School": "Bishop McDevitt HS",
+        "Position": "WR",
+        "Score": 90,
+        "Star": 4,
+        "Height": "6'",
+        "Weight": 200
+      },
+      "geometry": {
+        "coordinates": [
+          -76.79197291534562,
+          40.27491608605919
+        ],
+        "type": "Point"
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Sterling Dixon",
+        "Location": "Spanish Fort, AL",
+        "High School": "Spanish Fort HS",
+        "Position": "LB",
+        "Score": 90,
+        "Star": 4,
+        "Height": "6'3\"",
+        "Weight": 212
+      },
+      "geometry": {
+        "coordinates": [
+          -87.85383445767143,
+          30.6887035670119
+        ],
+        "type": "Point"
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Isaia Faga",
+        "Location": "Phenix City, AL",
+        "High School": "Central HS",
+        "Position": "DL",
+        "Score": 88,
+        "Star": 3,
+        "Height": "6'2\"",
+        "Weight": 299
+      },
+      "geometry": {
+        "coordinates": [
+          -85.03954818650772,
+          32.48523388330074
+        ],
+        "type": "Point"
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Amari Jefferson",
+        "Location": "Chattanooga, TN",
+        "High School": "Baylor School HS",
+        "Position": "WR",
+        "Score": 92,
+        "Star": 4,
+        "Height": "6'",
+        "Weight": 197
+      },
+      "geometry": {
+        "coordinates": [
+          -85.3367828134918,
+          35.086306853024254
+        ],
+        "type": "Point"
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Jayshawn Ross",
+        "Location": "Kansas City, MO",
+        "High School": "Liberty North HS",
+        "Position": "Edge",
+        "Score": 93,
+        "Star": 4,
+        "Height": "6'4\"",
+        "Weight": 239
+      },
+      "geometry": {
+        "coordinates": [
+          -94.43270200000048,
+          39.28440275336553
+        ],
+        "type": "Point"
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Casey Poe",
+        "Location": "Lindale, TX",
+        "High School": "Lindale HS",
+        "Position": "IOL",
+        "Score": 93,
+        "Star": 4,
+        "Height": "6'4\"",
+        "Weight": 322
+      },
+      "geometry": {
+        "coordinates": [
+          -95.39687218650764,
+          32.51425779577315
+        ],
+        "type": "Point"
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Kevin Riley",
+        "Location": "Northport, AL",
+        "High School": "Tuscaloosa County HS",
+        "Position": "RB",
+        "Score": 94,
+        "Star": 4,
+        "Height": "5'11\"",
+        "Weight": 195
+      },
+      "geometry": {
+        "coordinates": [
+          -87.60854272883567,
+          33.30756497782377
+        ],
+        "type": "Point"
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Daniel Hill",
+        "Location": "Meridian, MS",
+        "High School": "Meridian HS",
+        "Position": "RB",
+        "Score": 94,
+        "Star": 4,
+        "Height": "6'1\"",
+        "Weight": 241
+      },
+      "geometry": {
+        "coordinates": [
+          -88.70304025662215,
+          32.3893872513203
+        ],
+        "type": "Point"
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Jeremiah Beaman",
+        "Location": "Birmingham, AL",
+        "High School": "Parker HS",
+        "Position": "DL",
+        "Score": 95,
+        "Star": 4,
+        "Height": "6'4\"",
+        "Weight": 296
+      },
+      "geometry": {
+        "coordinates": [
+          -86.82932262698365,
+          33.51484201848504
+        ],
+        "type": "Point"
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Noah Carter",
+        "Location": "Peoria, AZ",
+        "High School": "Centennial HS",
+        "Position": "Edge",
+        "Score": 96,
+        "Star": 4,
+        "Height": "6'4\"",
+        "Weight": 242
+      },
+      "geometry": {
+        "coordinates": [
+          -112.22977564418002,
+          33.616220937761085
+        ],
+        "type": "Point"
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Zavier Mincey",
+        "Location": "Daytona Beach, FL",
+        "High School": "Mainland HS",
+        "Position": "CB",
+        "Score": 98,
+        "Star": 5,
+        "Height": "6'3\"",
+        "Weight": 204
+      },
+      "geometry": {
+        "coordinates": [
+          -81.05115608465597,
+          29.197464781297043
+        ],
+        "type": "Point"
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Zabien Brown",
+        "Location": "Santa Ana, CA",
+        "High School": "Mater Dei HS",
+        "Position": "CB",
+        "Score": 98,
+        "Star": 5,
+        "Height": "6'",
+        "Weight": 196
+      },
+      "geometry": {
+        "coordinates": [
+          -117.88329637301625,
+          33.726745179571495
+        ],
+        "type": "Point"
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Jaylen Mbawke",
+        "Location": "Pinson, AL",
+        "High School": "Clay-Chalkville HS",
+        "Position": "CB",
+        "Score": 98,
+        "Star": 5,
+        "Height": "5'11\"",
+        "Weight": 192
+      },
+      "geometry": {
+        "coordinates": [
+          -86.60236872883621,
+          33.695360392827524
+        ],
+        "type": "Point"
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Ryan Williams",
+        "Location": "Saraland, AL",
+        "High School": "Saraland HS",
+        "Position": "WR",
+        "Score": 99,
+        "Star": 5,
+        "Height": "6'",
+        "Weight": 175
+      },
+      "geometry": {
+        "coordinates": [
+          -88.10052754232804,
+          30.79571336027304
+        ],
+        "type": "Point"
+      },
+      "id": 20
+    }
+  ]
+}
